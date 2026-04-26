@@ -19,7 +19,7 @@ const AppLayout = () => {
 
   const handleLogout = () => {
     logout()
-    navigate('/login')
+    navigate('/auth/login')
   }
 
   return (
