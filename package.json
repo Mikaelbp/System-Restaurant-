@@ -1,0 +1,17 @@
+{
+  "name": "sistema-restaurante",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "start": "npm run start --workspace=backend && npm run start --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
