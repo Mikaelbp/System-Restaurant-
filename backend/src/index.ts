@@ -20,7 +20,10 @@ dotenv.config()
 const app = express()
 export const prisma = new PrismaClient()
 
-app.use(cors())
+app.use(cors({
+  origin: "https://system-restaurant-frontend.vercel.app",
+  credentials: true
+}))
 app.use(helmet())
 app.use(express.json())
 
